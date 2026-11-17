@@ -1,0 +1,29 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+
+<h2 style="color:#2563eb;">Your Order Has Been Shipped!</h2>
+
+<p>Hello {{ customer_name }},</p>
+
+<p>
+    Great news! Your order has been shipped and is on its way to your delivery address.
+</p>
+
+<div style="background:#f8fafc; padding:15px; border-radius:6px;">
+    <p><strong>Order Number:</strong> {{ order_number }}</p>
+    <p><strong>Order Status:</strong> {{ order_status }}</p>
+    <p><strong>Payment Method:</strong> {{ payment_method }}</p>
+    <p><strong>Total Amount:</strong> ৳{{ total_amount }}</p>
+</div>
+
+<p>
+    Please stay available to receive your order.
+</p>
+
+<p>
+    Thank you,<br>
+    <strong>LocalHub Team</strong>
+</p>
+
+{% endblock %}

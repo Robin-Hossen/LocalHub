@@ -1,0 +1,25 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+
+<h2 style="color:#16a34a;">Order Confirmed!</h2>
+
+<p>Hello {{ customer_name }},</p>
+
+<p>
+    Thank you for shopping with LocalHub.
+    Your order has been successfully confirmed.
+</p>
+
+<div style="background:#f8fafc; padding:15px; border-radius:6px;">
+    <p><strong>Order Number:</strong> {{ order_number }}</p>
+    <p><strong>Order Status:</strong> {{ order_status }}</p>
+    <p><strong>Payment Method:</strong> {{ payment_method }}</p>
+    <p><strong>Total Amount:</strong> ৳{{ total_amount }}</p>
+</div>
+
+<p>We will notify you when your order status changes.</p>
+
+<p>Thank you,<br><strong>LocalHub Team</strong></p>
+
+{% endblock %}

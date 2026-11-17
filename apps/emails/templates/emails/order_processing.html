@@ -1,0 +1,29 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+
+<h2 style="color:#2563eb;">Your Order Is Being Processed!</h2>
+
+<p>Hello {{ customer_name }},</p>
+
+<p>
+    Good news! Your order has been confirmed and is now being processed by our team.
+</p>
+
+<div style="background:#f8fafc; padding:15px; border-radius:6px;">
+    <p><strong>Order Number:</strong> {{ order_number }}</p>
+    <p><strong>Order Status:</strong> {{ order_status }}</p>
+    <p><strong>Payment Method:</strong> {{ payment_method }}</p>
+    <p><strong>Total Amount:</strong> ৳{{ total_amount }}</p>
+</div>
+
+<p>
+    We are preparing your order. We will notify you when it is shipped.
+</p>
+
+<p>
+    Thank you,<br>
+    <strong>LocalHub Team</strong>
+</p>
+
+{% endblock %}
